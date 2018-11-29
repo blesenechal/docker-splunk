@@ -41,8 +41,8 @@ prep_ansible() {
 	if [[ "$DEBUG" == "true" ]]; then
 		ansible-playbook --version
 		python inventory/environ.py --write-to-file
-		cat /opt/ansible/inventory/ansible_inventory.json
-		cat /opt/ansible/inventory/messages.txt || true
+		cat ${SPLUNK_ANSIBLE_HOME}/inventory/ansible_inventory.json
+		cat ${SPLUNK_ANSIBLE_HOME}/inventory/messages.txt || true
 		echo
 	fi
 }
